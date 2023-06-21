@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base_color: rgba(24, 71, 24, 0.945);
+    --main_color: #f8f8ff;
+    --aside_color: #fff;
+}
+
+@font-face {
+    font-family: NBold;
+    src: url(Norse-Bold.otf);
+}
+
+body {
+    display: flex;
+    background-color: var(--main_color);
+}
+
+aside {
+    background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+    color: var(--aside_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.picture {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: NBold;
+    font-size: 64px;
+    padding: 0.8rem 1rem;
+    margin-top: 21vh;
+}
+
+.picture img {
+    width: 20%;
+    object-fit: contain;
+}
+
+.footer {
+    color: var(--main_color);
+    padding-left: 2rem;
+}
+
+.footer a {
+    color: var(--main_color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0;
+    width: 100%;
+}
+
+main p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 3rem;
+    width: 55ch;
+}
+
+button,
+form h2 {
+    margin: 1rem 2rem;
+}
+
+main a {
+    text-decoration: none;
+}
+
+.form_section {
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    background-color: var(--aside_color);
+    padding: 4rem 3rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px -3px rgba(0, 0, 0, 0.5);
+}
+
+.form_section section {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.form_section section:nth-of-type(odd) {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.form_section section:nth-of-type(even) {
+    margin-left: 0;
+}
+
+input {
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+label {
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+}
+
+form h3 {
+    position: absolute;
+}
+
+span {
+    display: block;
+}
+
+h3 {
+    margin: 1.6rem 3rem;
+}
+
+button {
+    border-radius: 6px;
+    padding: 1rem 3rem;
+    border-width: 1px;
+    border-color: transparent;
+    background-color: var(--base_color);
+    color: var(--main_color);
+}
+
+p a {
+    color: var(--base_color);
+}
