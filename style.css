@@ -8,6 +8,8 @@
     --base_color: rgba(24, 71, 24, 0.945);
     --main_color: #f8f8ff;
     --aside_color: #fff;
+    --outline_valid: blue;
+    --outline_invalid: red;
 }
 
 @font-face {
@@ -113,7 +115,36 @@ input {
     outline: none;
     padding: 0.5rem;
     border-radius: 3px;
-    border: 1px solid #ccc;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    outline-color: var(--outline_invalid);
+    outline-width: 1px;
+    outline-style: ridge;
+    border: none;
+}
+
+input:focus:valid {
+    outline-width: 1px;
+    outline-color: var(--outline_valid);
+    outline-style: outset;
+    border: none;
+    box-shadow: 3px 3px 5px 0 lightblue;
+}
+
+input+.error {
+    color: red;
+    margin-left: 0;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+input::placeholder {
+    color: #ccc;
 }
 
 label {
@@ -141,19 +172,22 @@ button {
     border-width: 1px;
     cursor: pointer;
     border-color: transparent;
-    background-color: var(--base_color);
+    background-color: #596D48;
     color: var(--main_color);
 }
-small{
+
+small {
     font-size: 1rem;
     display: block;
     margin-left: 3rem;
     margin-bottom: 1rem;
     font-weight: 400;
 }
+
 small a {
     color: var(--base_color);
 }
+
 
 
 

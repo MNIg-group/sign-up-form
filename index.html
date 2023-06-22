@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up Form</title>
         <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
     </head>
 
     <body>
@@ -24,37 +25,42 @@
             <p>This is not a real online service! You know you need something like this in your life to help you realize
                 your deepest dreams.<span> Sign up now to get started.</span></p>
             <h3>You know you want to.</h3>
-            <form action="./">
+            <form>
                 <h3>Let's do this!</h3>
                 <section class="form_section">
                     <section>
                         <label for="firstName">FIRST NAME</label>
-                        <input type="text" name="firstName" id="firstName">
+                        <input type="text" autocomplete="given-name" name="firstName" id="firstName" required
+                            pattern="[\p{L}\.\- ]+">
                     </section>
 
                     <section>
-                        <label for="lastName">LAST NAME</label>
-                        <input type="text" name="lastName" id="lastName">
+                        <label for=" lastName">LAST NAME</label>
+                        <input type="text" autocomplete="family-name" name="lastName" id="lastName" required
+                            pattern="[\p{L}\.\- ]+">
                     </section>
 
                     <section>
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <label for=" email">EMAIL</label>
+                        <input type="email" autocomplete="email" name="email" id="email" required>
                     </section>
 
                     <section>
                         <label for="phoneNumber">PHONE NUMBER</label>
-                        <input type="tel" name="phoneNumber" id="phoneNumber">
+                        <input type="tel" autocomplete="tel-national" name="phoneNumber" placeholder="0123456789"
+                            id="phoneNumber" pattern="[0-9]{10,12}" required>
                     </section>
 
                     <section>
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" autocomplete="new-password" name="password" id="password" minlength="8"
+                            aria-describedby="password-constraints" required>
+                        <small class="message hidden">*Passwords do not match</small>
                     </section>
 
                     <section>
                         <label for="confirmPassword">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirmPassword">
+                        <input type="password" id="confirmPassword" required>
                     </section>
                 </section>
 
